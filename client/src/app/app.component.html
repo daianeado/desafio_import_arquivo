@@ -1,0 +1,11 @@
+<p-fieldset legend="Anexar Documento">
+  <div class="ui-g-12 ui-input-container">
+    <p-fileUpload name="files" url="ignore-this-request" (onError)="onError($event.xhr, $event.files)"
+                  auto="auto" accept="application/pdf" maxFileSize="4194304"
+                  invalidFileSizeMessageSummary="{0}: Tamanho Inválido. "
+                  invalidFileSizeMessageDetail="O arquivo deve ser menor que 4MB."
+                  multiple="multiple">
+    </p-fileUpload>
+  </div>
+</p-fieldset>
+<button type="button" pButton icon="ui-icon-save" label="Upload" class="auto-width ui-button" (click)="upload()"></button>
